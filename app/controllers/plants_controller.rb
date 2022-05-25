@@ -11,14 +11,15 @@ class PlantsController < ApplicationController
   end
 
   def destroy
+    # Retrieve the specific instance
     @plant = Plant.find(params[:id])
+    # Destroy it from the database
     @plant.destroy
 
     redirect_to garden_path(@plant.garden)
   end
 
   private
-
 
   def plant_params
     params.require(:plant).permit(:name, :image_url)
