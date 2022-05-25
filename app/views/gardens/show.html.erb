@@ -18,13 +18,17 @@
   </div>
   <%# NEW PLANT %>
   <div class="row justify-content-center">
-    <h4>Add a plant:</h4>
-    <%# Simple Form needs both instances to build the correct action as show in the next line %>
-    <%# <form action='/garden/23(garden_id)/plants'> %>
-    <%= simple_form_for([@garden, @plant]) do |f| %>
-      <%= f.input :name, placeholder: 'Palm Tree' %>
-      <%= f.input :image_url, placeholder: 'https://some_picture_from_google.png' %>
-      <%= f.button :submit, class: 'btn btn-primary' %>
-    <% end %>
+    <div class="col-4 my-4">
+      <div class="form-card">
+        <h4>Add a plant:</h4>
+        <%# Simple Form needs both instances to build the correct action as show in the next line %>
+        <%# <form action='/garden/23(garden_id)/plants'> %>
+        <%= simple_form_for([@garden, @plant]) do |f| %>
+          <%= f.input :name, placeholder: 'Palm Tree' %>
+          <%= f.input :image_url, placeholder: 'https://some_picture_from_google.png' %>
+          <%= f.button :submit, class: 'my-button' %>
+        <% end %>
+      </div>
+    </div>
   </div>
 </div>
